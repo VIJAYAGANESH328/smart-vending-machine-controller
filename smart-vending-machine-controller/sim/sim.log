@@ -1,0 +1,14 @@
+VCD info: dumpfile dump.vcd opened for output.
+Smart Vending Machine Controller - self-checking test
+Test 1: exact payment
+Test 2: overpayment and change
+Test 3: insufficient balance
+Test 4: cancel refund
+Test 5: reset during transaction
+Test 6: select without coin
+Test 7: multiple coins
+Test 8: back-to-back sales
+Test 9: coin and select together
+PASS: 34 checks, FAIL: 0 checks
+ALL TESTS PASSED
+tb/tb_vending_machine.sv:131: $finish called at 466000 (1ps)

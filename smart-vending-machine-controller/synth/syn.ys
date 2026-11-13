@@ -1,0 +1,9 @@
+# Yosys synthesis script. Run from the repository root:  yosys -s synth/syn.ys
+read_verilog -sv rtl/vending_machine.sv
+hierarchy -top vending_machine
+proc; opt; fsm -nomap; opt
+synth -top vending_machine
+abc -g AND,NAND,OR,NOR,XOR,XNOR,ANDNOT,ORNOT,MUX
+opt_clean
+tee -o synth/stat.txt stat
+write_verilog -noattr synth/synth.v
